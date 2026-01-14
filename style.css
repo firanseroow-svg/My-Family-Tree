@@ -1,52 +1,32 @@
 body {
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #fff;
   text-align: center;
-}
-
-h1 {
-  margin: 20px 0;
 }
 
 .controls {
   margin-bottom: 20px;
 }
 
-.controls button, .controls input {
-  padding: 8px 10px;
-  margin: 4px;
+.controls input, button {
+  padding: 6px;
+  margin: 3px;
 }
 
-#tree-container {
-  position: relative;
-  width: 100%;
-  min-height: 600px;
-}
-
-#tree {
-  position: relative;
-  z-index: 2;
-}
-
-#lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-/* PERSON NODE */
 .person {
-  position: absolute;
-  padding: 8px 14px;
-  background: #fff;
-  border: 2px solid #000;
+  border: 2px solid black;
   border-radius: 20px;
+  padding: 8px 14px;
+  display: inline-block;
+  margin: 8px;
   cursor: pointer;
-  user-select: none;
+  background: white;
 }
 
 .person.selected {
   background: #ffe066;
-  border-color: #000;
+}
+
+.level {
+  margin-bottom: 30px;
 }
