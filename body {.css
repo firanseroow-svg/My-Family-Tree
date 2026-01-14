@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 5px;
+}
+
+#tree {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.person {
+  background: #1e293b;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  min-width: 120px;
+}
+
+.person button {
+  margin-top: 5px;
+  background: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
