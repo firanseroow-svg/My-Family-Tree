@@ -1,45 +1,43 @@
-let family = [
-  { id: 1, name: "Saya", role: "me" }
-];
-
-const treeDiv = document.getElementById("tree");
-
-function renderTree() {
-  treeDiv.innerHTML = "";
-  family.forEach(person => {
-    const div = document.createElement("div");
-    div.className = "person";
-    div.innerHTML = `
-      <strong>${person.name}</strong><br>
-      <small>${person.role}</small><br>
-      <button onclick="deletePerson(${person.id})">Delete</button>
-    `;
-    treeDiv.appendChild(div);
-  });
+body {
+  font-family: Arial, sans-serif;
+  background: #f4c430;
+  text-align: center;
 }
 
-function addPerson() {
-  const name = document.getElementById("nameInput").value;
-  const role = document.getElementById("relation").value;
-
-  if (!name) {
-    alert("Nama tidak boleh kosong!");
-    return;
-  }
-
-  family.push({
-    id: Date.now(),
-    name: name,
-    role: role
-  });
-
-  document.getElementById("nameInput").value = "";
-  renderTree();
+h1 {
+  margin-bottom: 10px;
 }
 
-function deletePerson(id) {
-  family = family.filter(person => person.id !== id);
-  renderTree();
+.controls {
+  margin-bottom: 20px;
 }
 
-renderTree();
+.controls input, .controls select, .controls button {
+  padding: 8px;
+  margin: 5px;
+}
+
+.person {
+  display: inline-block;
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.person small {
+  display: block;
+  font-size: 12px;
+}
+
+.person button {
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  font-size: 10px;
+}
