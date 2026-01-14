@@ -10,18 +10,15 @@
 <h1>Family Tree</h1>
 
 <div class="controls">
-  <input type="text" id="nameInput" placeholder="Nama orang">
+  <input id="nameInput" placeholder="Nama">
   <button onclick="addParent()">Add Parent</button>
   <button onclick="addPartner()">Add Partner</button>
   <button onclick="addChild()">Add Child</button>
   <button onclick="addSibling()">Add Sibling</button>
-  <button onclick="deletePerson()">Delete Person</button>
+  <button onclick="deletePerson()">Delete</button>
 </div>
 
-<div id="tree-container">
-  <svg id="lines"></svg>
-  <div id="tree"></div>
-</div>
+<div id="tree"></div>
 
 <script src="script.js"></script>
 </body>
